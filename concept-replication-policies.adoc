@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: concept-replication-policies.html 
+keywords: replication policy, policy, replication, replicating, snapmirror, snapvault, data replication, disaster recovery, DR 
+summary: 'Vous pouvez répliquer des données entre des environnements de travail BlueXP. Vous pouvez choisir une réplication unique pour le déplacement des données vers et depuis le cloud, ou encore un calendrier récurrent pour la reprise d"activité ou la conservation à long terme.' 
+---
+= En savoir plus sur les règles de réplication
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous aurez peut-être besoin d'aide pour choisir une stratégie de réplication lorsque vous configurez la réplication de données dans BlueXP. Une stratégie de réplication définit la manière dont le système de stockage réplique les données d'un volume source vers un volume de destination.
+
+
+
+== Quelles sont les règles de réplication
+
+Le système d'exploitation ONTAP crée automatiquement des sauvegardes appelées copies Snapshot. Une copie Snapshot est une image en lecture seule d'un volume qui capture l'état du système de fichiers à un moment donné.
+
+Lorsque vous répliquez des données entre des systèmes, vous répliquez des copies Snapshot d'un volume source vers un volume de destination. Une stratégie de réplication spécifie les copies Snapshot à répliquer du volume source vers le volume de destination.
+
+
+TIP: Les règles de réplication sont également appelées « stratégies de protection_ car elles sont optimisées par les technologies SnapMirror et SnapVault, qui assurent la protection de la reprise après incident ainsi que la sauvegarde et la restauration disque à disque.
+
+L'image suivante montre la relation entre les copies Snapshot et les règles de réplication :
+
+image:diagram_replication_policies.png["Cette illustration montre les copies Snapshot sur un volume source et une stratégie de réplication qui spécifie la réplication de toutes les copies Snapshot ou de certaines copies Snapshot du volume source vers le volume de destination."]
+
+
+
+== Types de règles de réplication
+
+Il existe trois types de règles de réplication :
+
+* Une règle _Mirror_ réplique les copies Snapshot nouvellement créées vers un volume de destination.
++
+Vous pouvez utiliser ces copies Snapshot pour protéger le volume source en vue de la reprise après incident ou de la réplication de données unique. Vous pouvez activer le volume de destination pour l'accès aux données à tout moment.
+
+* Une règle _Backup_ réplique des copies Snapshot spécifiques sur un volume de destination et les conserve généralement pendant une période plus longue que sur le volume source.
++
+Vous pouvez restaurer des données à partir de ces copies Snapshot lorsque les données sont corrompues ou perdues, et les conserver à des fins de conformité aux normes et à d'autres fins liées à la gouvernance.
+
+* Une politique _Mirror et Backup_ permet la reprise sur incident et la conservation à long terme.
++
+Chaque système inclut une stratégie de mise en miroir et de sauvegarde par défaut, qui fonctionne bien dans de nombreuses situations. Si vous avez besoin de règles personnalisées, vous pouvez créer vos propres règles à l'aide de System Manager.
+
+
+
+Les images suivantes montrent la différence entre les stratégies Miroir et Sauvegarde. Une stratégie Miroir reflète les copies Snapshot disponibles sur le volume source.
+
+image:diagram_replication_snapmirror.png["Cette illustration présente les copies Snapshot sur un volume source et un volume de destination Mirror qui assure la mise en miroir du volume source."]
+
+Une stratégie de sauvegarde conserve généralement les copies Snapshot plus longtemps qu'elles ne sont conservées sur le volume source :
+
+image:diagram_replication_snapvault.png["Cette illustration présente les copies Snapshot sur un volume source et un volume de destination de sauvegarde qui inclut davantage de copies Snapshot, car SnapVault conserve les copies Snapshot pour la conservation à long terme."]

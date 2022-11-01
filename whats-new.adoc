@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes' 
+summary: 'Découvrez les nouveautés du service de réplication dans BlueXP (anciennement Cloud Manager).' 
+---
+= Quoi de neuf
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Découvrez les nouveautés du service de réplication dans BlueXP (anciennement Cloud Manager).
+
+
+
+== 18 septembre 2022
+
+
+
+=== FSX pour ONTAP vers Cloud Volumes ONTAP
+
+Vous pouvez désormais répliquer des données d'un système de fichiers Amazon FSX pour ONTAP vers Cloud Volumes ONTAP.
+
+https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["Découvrez comment configurer la réplication des données"].
+
+
+
+== 31 juillet 2022
+
+
+
+=== FSX pour ONTAP en tant que source de données
+
+Vous pouvez désormais répliquer des données d'un système de fichiers Amazon FSX pour ONTAP vers les destinations suivantes :
+
+* Amazon FSX pour ONTAP
+* Cluster ONTAP sur site
+
+
+https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["Découvrez comment configurer la réplication des données"].
+
+
+
+== 2 septembre 2021
+
+
+
+=== Prise en charge d'Amazon FSX pour ONTAP
+
+Vous pouvez désormais répliquer des données à partir d'un système Cloud Volumes ONTAP ou d'un cluster ONTAP sur site vers un système de fichiers Amazon FSX pour ONTAP.
+
+https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["Découvrez comment configurer la réplication des données"].
+
+
+
+== 5 mai 2021
+
+
+
+=== Interface reconçue
+
+Nous avons modifié l'onglet réplication pour faciliter l'utilisation et pour adapter l'apparence actuelle de l'interface utilisateur Cloud Manager.
+
+image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-replication/main/media/replication.gif["Capture d'écran de l'onglet réplication reconçue dans Cloud Manager qui affiche la liste des relations de volumes."]
