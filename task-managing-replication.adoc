@@ -68,4 +68,5 @@ Découvrez comment effectuer une resynchronisation inverse, qui resynchronise le
 |===
 
 
+.Résultat
 Après avoir sélectionné une action, BlueXP met à jour la relation ou le programme.

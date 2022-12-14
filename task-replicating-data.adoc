@@ -120,4 +120,5 @@ Plusieurs plannings par défaut sont disponibles. Si vous souhaitez un autre pla
 . *Revue*: Passez en revue vos sélections et cliquez sur *Go*.
 
 
+.Résultat
 BlueXP démarre le processus de réplication des données. Vous pouvez afficher des détails sur la relation de volume dans le service de réplication.
